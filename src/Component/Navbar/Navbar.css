@@ -1,0 +1,134 @@
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #eeeeee;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.nav-logo {
+  & a {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid #59ff00;
+
+    & span {
+      color: #59ff00;
+    }
+  }
+}
+
+.nav-link {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+
+  & .link-a {
+    position: relative;
+    text-decoration: none;
+    color: #0000008c;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+  }
+
+  & .link-a::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #000;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+  }
+
+  & .link-a:hover::before {
+    width: 80%;
+  }
+
+  & .link-a:hover {
+    color: #000;
+  }
+}
+
+.active-link {
+  color: #000;
+}
+
+/*  Change Backgroud color */
+.scroll-nav {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: auto;
+        margin: 15px 0;
+        align-items: start;
+        margin-left: 15px;
+        width: 445px;
+    }
+
+    .mobile-nav {
+        width: 100%;
+        background-color: #eeeeee;
+        position: fixed;
+        margin-left: 15px;
+        margin: 0px 0;
+        right: -100%;
+        transition: all 0.3s ease;
+        z-index: 1;
+
+        & li {
+            margin: 15px 0;
+            margin-left: 15px;
+            list-style: none;
+
+            & a {
+                text-decoration: none;
+                color: #0000008c;
+            }
+
+            & a:hover {
+                color: #000;
+            }
+        }
+    }
+
+    .show-nav {
+        right: 0;
+    }
+
+    nav {
+        & .bars {
+            font-size: 1.2rem;
+            margin-right: 0;
+            margin-top: .5rem;
+        }
+    }
+    .nav-link {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 481px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .bars {
+    display: none;
+  }
+}

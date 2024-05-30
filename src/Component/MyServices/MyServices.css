@@ -1,0 +1,160 @@
+.services-section {
+    height: 500px;
+    & .service-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    & .service-subtitle {
+        display: flex;
+        justify-content: center;
+        color: #868686;
+    }
+
+    & .services-container {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1.8rem;
+
+        & .services-content {
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: #eeeeee;
+            padding: 6rem 0 2rem 2.5rem;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            width: 250px;
+
+            .active-modal {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            & .icon {
+                display: block;
+                font-size: 2rem;
+                color: #303030;
+                margin-bottom: 1rem;
+            }
+
+            & .services-title {
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            & .services-button {
+                color: #696969;
+                font-size: 1rem;
+                display: inline-flex;
+                align-items: center;
+                column-gap: .2rem;
+                cursor: pointer;
+            }
+
+            & .arrow-right {
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            }
+            
+            & .services-button:hover .arrow-right {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    & .services-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pad: 0 1rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+
+        & .services-modal-content {
+            width: 500px;
+            position: relative;
+            background-color: #eeeeee;
+            padding: 4.5rem 2.5rem 2.5rem;
+            border-radius: 1.5rem;
+
+            & .xmark {
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                font-size: 1.5rem;
+                color: #696969;
+                cursor: pointer;
+            }
+
+            & .services-modal-title, .services-modal-description {
+                text-align: center;
+            }
+
+            & .services-modal-title {
+                font-size: 1.4rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            & .services-modal-description {
+                font-size: 1rem;
+                color: #808080;
+                padding: 0 3.5rem;
+                margin-bottom: 2rem;
+            }
+
+            & .services-modal-services {
+                list-style: none;
+
+                & .services-modal-service {
+                    margin-bottom: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    column-gap: .75rem;
+
+                    & .check {
+                        font-size: 1.1rem;
+                        color: #696969;
+                    }
+                    
+                    & .services-modal-info {
+                        color: #808080;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-container {
+        flex-direction: column;
+        row-gap: 1.8rem;
+
+        & .services-modal-content {
+            padding: 4.5rem 1.5rem 2.5rem;
+            width: 400px !important;
+
+            & .services-modal-description {
+                padding: 0;
+            }
+        }
+    }
+    
+    .services-section {
+        height: auto;
+    }
+}
