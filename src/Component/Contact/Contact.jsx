@@ -2,23 +2,17 @@ import React from "react";
 import { FaSquareInstagram, FaFacebook, FaArrowRight } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
 import "./Contact.css";
-import { Fade } from "react-reveal";
 
 function Contact() {
   return (
     <section className="contact-section" id="contact">
-      <Fade top>
         <h2 className="contact-title">Get in touch</h2>
         <span className="contact-subtitle">Contact me</span>
-      </Fade>
       <div className="contact-container">
         <div className="contact-con">
-          <Fade left>
             <h1>Talk to me</h1>
-          </Fade>
           <div className="contact-social">
             <div className="contact-content">
-              <Fade bottom distance="50%">
                 <div className="contact-card">
                   <FaSquareInstagram className="icon" />
 
@@ -56,11 +50,9 @@ function Contact() {
                     <FaArrowRight className="arrow" />
                   </a>
                 </div>
-              </Fade>
             </div>
           </div>
         </div>
-        <Fade right>
           <div className="contact-form">
             <h3 className="contact-oder">Write me your project</h3>
             <form action="" className="contact-input">
@@ -94,7 +86,6 @@ function Contact() {
               ></textarea>
             </form>
           </div>
-        </Fade>
       </div>
     </section>
   );

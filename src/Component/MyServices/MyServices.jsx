@@ -8,7 +8,6 @@ import {
   FaPalette,
   FaFirstdraft,
 } from "react-icons/fa6";
-import { Fade } from "react-reveal";
 
 function MyServices() {
   const [showModal, setShowModal] = useState(0);
@@ -19,14 +18,11 @@ function MyServices() {
 
   return (
     <section className="services-section" id="services">
-      <Fade>
         <h2 className="service-title">Services</h2>
         <span className="service-subtitle">What i offer</span>
-      </Fade>
 
       <div className="services-container">
         <div className="services-content">
-          <Fade left>
             <div>
               <FaCode className="icon" />
               <h3 className="services-title">
@@ -37,7 +33,6 @@ function MyServices() {
             <span className="services-button" onClick={() => toggleTab(1)}>
               Viwe More <FaArrowRight className="arrow-right" />
             </span>
-          </Fade>
 
           <div
             className={
@@ -91,7 +86,6 @@ function MyServices() {
         </div>
 
         <div className="services-content">
-          <Fade top>
             <div>
               <FaPalette className="icon" />
               <h3 className="services-title">
@@ -102,7 +96,6 @@ function MyServices() {
             <span className="services-button" onClick={() => toggleTab(2)}>
               Viwe More <FaArrowRight className="arrow-right" />
             </span>
-          </Fade>
 
           <div
             className={
@@ -156,7 +149,6 @@ function MyServices() {
         </div>
 
         <div className="services-content">
-          <Fade right>
 
           <div>
             <FaFirstdraft className="icon" />
@@ -168,7 +160,6 @@ function MyServices() {
           <span className="services-button" onClick={() => toggleTab(3)}>
             Viwe More <FaArrowRight className="arrow-right" />
           </span>
-          </Fade>
 
           <div
             className={
